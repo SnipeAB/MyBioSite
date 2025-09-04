@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,24 +8,31 @@
   <link href="bio_style.css" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
+
 <body class="bg-[rgba(2,10,27,255)] min-h-screen relative overflow-hidden">
 
   <!-- Landing Overlay -->
-  <div id="landing-screen" class="absolute inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 text-white transition-opacity duration-1000">
-    <button id="enter-btn" class="text-2xl text-[rgb(202,122,121)] px-0.5 py-0.5 bg-transparent hover:bg-transparent-600 transition rounded-lg shadow-xl">
+  <div id="landing-screen"
+    class="absolute inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 text-white transition-opacity duration-1000">
+    <button id="enter-btn"
+      class="text-2xl text-[rgb(202,122,121)] px-0.5 py-0.5 bg-transparent hover:bg-transparent-600 transition rounded-lg shadow-xl">
       Click to Enter
     </button>
   </div>
 
   <!-- Main Content -->
-  <div id="main-content" class="flex items-center justify-center min-h-screen p-6 opacity-0 transition-opacity duration-1000 pointer-events-none">
-    <div class="card-glass max-w-sm w-full rounded-2xl border border-purple-700/60 shadow-lg text-white overflow-hidden relative bg-[rgba(2,10,27,255)]">
+  <div id="main-content"
+    class="flex items-center justify-center min-h-screen p-6 opacity-0 transition-opacity duration-1000 pointer-events-none">
+    <div
+      class="card-glass max-w-sm w-full rounded-2xl border border-purple-700/60 shadow-lg text-white overflow-hidden relative bg-[rgba(2,10,27,255)]">
       <div class="relative">
         <img src="img/1.gif" alt="Banner" class="h-36 w-full object-cover" />
-        <img src="img/2.gif" alt="Avatar" class="w-24 h-24 rounded-full border-4 border-[#0f0c29] absolute -bottom-12 left-5 shadow-lg" />
+        <img src="img/2.gif" alt="Avatar"
+          class="w-24 h-24 rounded-full border-4 border-[#0f0c29] absolute -bottom-12 left-5 shadow-lg" />
       </div>
 
       <div class="pt-16 pb-6 px-6">
@@ -38,7 +46,8 @@
         </div>
 
         <p class="text-[rgb(202,122,121)] text-sm mt-4 ">
-          Hello I am Snipe. I’m 20, based in Scotland. Into gaming, programming, hacking, and building cool stuff online.
+          Hello I am Snipe. I’m 20, based in Scotland. Into gaming, programming, hacking, and building cool stuff
+          online.
         </p>
 
         <div class="mt-6 flex items-center justify-between text-[rgb(202,122,121)]">
@@ -46,10 +55,12 @@
             <i class="fas fa-map-marker-alt text-[rgb(202,122,121)]"></i> Scotland
           </span>
           <div class="flex gap-4 text-xl">
-            <a href="https://discord.gg/jnDgHHBEhC" class="icon-hover" target="_blank" rel="noopener noreferrer" title="Join my Discord">
+            <a href="https://discord.gg/jnDgHHBEhC" class="icon-hover" target="_blank" rel="noopener noreferrer"
+              title="Join my Discord">
               <i class="fab fa-discord"></i>
             </a>
-            <a href="https://github.com/SnipeZoidYT" class="icon-hover" target="_blank" rel="noopener noreferrer" title="GitHub">
+            <a href="https://github.com/SnipeZoidYT" class="icon-hover" target="_blank" rel="noopener noreferrer"
+              title="GitHub">
               <i class="fab fa-github"></i>
             </a>
             <a href="#" class="icon-hover opacity-30 cursor-not-allowed" title="Coming soon">
@@ -61,9 +72,13 @@
     </div>
   </div>
 
+  <!-- Custom Cursor -->
+  <div class="cursor"></div>
+
   <!-- Audio -->
   <audio id="bg-music" src="music/song.mp3" preload="auto"></audio>
 
   <script src="bio_script.js"></script>
 </body>
+
 </html>

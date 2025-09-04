@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const mainContent = document.getElementById("main-content");
   const music = document.getElementById("bg-music");
 
+  // ===== Landing Screen Logic =====
   enterBtn.addEventListener("click", () => {
     landingScreen.classList.add("opacity-0");
     landingScreen.classList.add("pointer-events-none");
@@ -18,5 +19,40 @@ document.addEventListener("DOMContentLoaded", () => {
         console.warn("Autoplay blocked:", err);
       });
     }, 1000);
+  });
+
+  // ===== Custom Cursor + Particle Trail =====
+  const cursor = document.createElement("div");
+  cursor.classList.add("cursor");
+  document.body.appendChild(cursor);
+
+  document.addEventListener("mousemove", (e) => {
+    cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+
+    // particle trail
+    const particle = document.createElement("div");
+    particle.classList.add("particle");
+    document.body.appendChild(particle);
+
+    particle.style.left = e.pageX + "px";
+    particle.style.top = e.pageY + "px";
+
+    setTimeout(() => {
+      particle.remove();
+    }, 1000);
+  });
+
+  // ===== Optional Click Pulse Effect =====
+  document.addEventListener("click", (e) => {
+    const pulse = document.createElement("div");
+    pulse.classList.add("pulse");
+    document.body.appendChild(pulse);
+
+    pulse.style.left = e.pageX + "px";
+    pulse.style.top = e.pageY + "px";
+
+    setTimeout(() => {
+      pulse.remove();
+    }, 600);
   });
 });

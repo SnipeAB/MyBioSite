@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ====== Card & UI Styling ====== */
 .card-glass {
   backdrop-filter: blur(14px);
   background: rgba(2, 10, 27, 0.75);
@@ -20,3 +21,86 @@
 .drop-shadow-glow {
   filter: drop-shadow(0 0 5px #c084fc);
 }
+
+/* ====== Custom Cursor ====== */
+body {
+  cursor: none; /* Hide system cursor */
+  background: linear-gradient(270deg, #020a1b, #1e1e2f, #3b1d5f, #020a1b);
+  background-size: 600% 600%;
+  animation: gradientShift 20s ease infinite;
+}
+
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  border: 2px solid rgb(202, 122, 121);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.08s ease;
+  z-index: 9999;
+  box-shadow: 0 0 15px rgba(202, 122, 121, 0.6);
+}
+
+/* Particle Trail */
+.particle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: rgb(202, 122, 121);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: fadeMove 1s linear forwards;
+}
+
+@keyframes fadeMove {
+  to {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+}
+
+/* Floating Card */
+.card-glass {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+/* Gradient Background */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Click Pulse */
+.pulse {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgb(202, 122, 121);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  animation: pulseAnim 0.6s ease-out forwards;
+  z-index: 9998;
+}
+
+@keyframes pulseAnim {
+  from {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0.9;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
+}
+
