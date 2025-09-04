@@ -4,7 +4,7 @@
 
 .card-glass {
   backdrop-filter: blur(14px);
-  background: rgba(15, 12, 41, 0.75);
+  background: rgba(2, 10, 27, 0.75);
   border-radius: 1rem;
   box-shadow: 0 0 30px rgba(123, 31, 162, 0.3);
 }
