@@ -19,7 +19,7 @@
 }
 
 .drop-shadow-glow {
-  filter: drop-shadow(0 0 5px #c084fc);
+  filter: drop-shadow(0 0 5px #bb7afd);
 }
 
 /* ====== Custom Cursor ====== */
@@ -104,3 +104,7 @@ body {
   }
 }
 
+/* ====== Click to enter fixes ====== */
+#enter-btn{
+  cursor: none;
+}

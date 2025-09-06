@@ -22,9 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // ===== Custom Cursor + Particle Trail =====
-  const cursor = document.createElement("div");
-  cursor.classList.add("cursor");
-  document.body.appendChild(cursor);
+  const cursor = document.querySelector(".cursor");
 
   document.addEventListener("mousemove", (e) => {
     cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
@@ -53,6 +51,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     setTimeout(() => {
       pulse.remove();
-    }, 600);
+    }, 1000);
   });
 });
